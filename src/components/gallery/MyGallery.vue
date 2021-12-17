@@ -1,14 +1,32 @@
 <template>
     <div class="gallery card">
-        <div 
-            class="gallery__item" 
-            v-for="img in 23"
-            :key="img"
-        >
-            <img src="https://www.fillmurray.com/640/360" alt="alt" class="gallery__img">
-        </div>
+        <my-gallery-item 
+            v-for="item in 23"
+            :key="item"
+            @open="toggle"
+        />
         <teleport to="body">
-            
+            <app-lite-box 
+                v-if="openFlag"
+                @close="toggle"
+            />
         </teleport>
     </div>
 </template>
+<script>
+import MyGalleryItem from '@/components/gallery/MyGalleryItem.vue'
+import { ref } from '@vue/reactivity'
+export default {
+    setup() {
+        const openFlag = ref(false)
+        const toggle = () => openFlag.value = !openFlag.value
+        return{
+            openFlag,
+            toggle
+        }
+    },
+    components:{
+        MyGalleryItem
+    }
+}
+</script>
