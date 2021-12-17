@@ -8,9 +8,17 @@
 @import './gallery//gallaryBox.scss';
 
 //ui
+@import './ui/btn.scss';
 @import './ui/liteBox.scss';
 @import './ui/like.scss';
+@import './ui/comments.scss';
+@import './ui/comment.scss';
+@import './ui/createComment.scss';
+@import './ui//form.scss';
 
+[v-cloak]{
+    display: none;
+}
 
 body{
     height: auto;
@@ -35,4 +43,10 @@ body{
 }
 .title{
     @include text(25px,$white,3rem,bold)
+}
+.no-scroll{
+    &::-webkit-scrollbar {
+        width: 0px;
+    }
+    scrollbar-width: none;
 }

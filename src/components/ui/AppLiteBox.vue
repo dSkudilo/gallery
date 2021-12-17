@@ -1,6 +1,6 @@
 <template>
     <div class="backdrop" @click="close"></div>
-    <div class="lite-box">
+    <div class="lite-box no-scroll">
         <slot></slot>
     </div>
 </template>

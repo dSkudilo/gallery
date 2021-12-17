@@ -1,0 +1,12 @@
+.comments{
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+}
+.comments__title{
+    @include  text(20px,$dark,3rem,bold)
+}
+
+
+
+

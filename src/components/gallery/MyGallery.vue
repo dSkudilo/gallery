@@ -15,6 +15,8 @@
             >
                 <my-gallery-lite-box 
                     :data="liteBoxData"
+                    :comments="comments"
+                    @sendComment="sendComment"
                 />
             </app-lite-box>
         </teleport>
@@ -28,16 +30,21 @@ export default {
     setup() {
         const openFlag = ref(false)
         const liteBoxData = ref()
+        const comments = ref([])
         const open = data => {
             openFlag.value = true
             liteBoxData.value = data
         }
         const close = () => openFlag.value = false
+
+        const sendComment = comment => comments.value.push(comment)
         return{
             openFlag,
             close,
             open,
-            liteBoxData
+            liteBoxData,
+            sendComment,
+            comments
         }
     },
     components:{

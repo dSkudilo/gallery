@@ -1,0 +1,13 @@
+.create-comment{
+    width: 100%;
+    padding: 1rem;
+    text-align: right;
+}
+.create-comment__btn{
+    margin: 1rem;
+}
+@media screen and (max-width:640px) {
+    .create-comment{
+        margin-top: 50px;
+    }
+}

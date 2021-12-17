@@ -1,0 +1,11 @@
+.form__control{
+    width: 100%;
+}
+.form__textarea{
+    width: 100%;
+    padding: 1rem;
+    resize: none;
+}
+.form__error{
+    color: $red;
+}
