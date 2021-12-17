@@ -7,5 +7,8 @@
         >
             <img src="https://www.fillmurray.com/640/360" alt="alt" class="gallery__img">
         </div>
+        <teleport to="body">
+            
+        </teleport>
     </div>
 </template>
