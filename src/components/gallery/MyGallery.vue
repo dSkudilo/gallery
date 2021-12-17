@@ -18,6 +18,7 @@ import MyGalleryItem from '@/components/gallery/MyGalleryItem.vue'
 import { ref } from '@vue/reactivity'
 export default {
     setup() {
+        console.log('asd');
         const openFlag = ref(false)
         const toggle = () => openFlag.value = !openFlag.value
         return{
