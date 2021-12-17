@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+@import './vars';
+@import './mixins';
+@import './nullstyle.scss';
+
+//gallery
+@import './gallery/gallery.scss';
+
+
+body{
+    height: auto;
+    font-family: Inter, Roboto, Oxygen, Fira Sans, Helvetica Neue, sans-serif;
+    display: block;
+    background-color: $body;
+    color: $body;
+}
+.container{
+    margin: 0 auto;
+    max-width: $maxWidth;
+}
+.container.with-margin{
+    margin-top:$marginTop; 
+}
+.card{
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    box-shadow: $shadow;
+    background: $white;
+}
+.title{
+    @include text(25px,$white,3rem,bold)
+}
