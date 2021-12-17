@@ -1,0 +1,54 @@
+$animDur:.1s;
+.like__control{
+    position: relative;
+    width: 50px;
+    height: 30px;
+}
+.like__input{
+    width: 0;
+    height: 0;
+    opacity: 0;
+    &:checked + .like__fake{
+        border-color: $blue;
+        background-color: $blue;
+        transition: 
+            border-color $animDur ease,
+            background-color $animDur ease;
+    }
+    &:checked + .like__fake::after{
+        color: #ffffff !important;
+        transition: color $animDur ease;
+    }
+}
+.like__fake{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: inherit;
+    height: inherit;
+    border:1px solid $body;
+    border-radius: $radius;
+    cursor: pointer;
+    &::after{
+        content: '❤';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        font-size: 20px;
+    }
+    &:hover{
+        border-color:$blue;
+        border-width: 1.5px;
+        transition: 
+            border-color $animDur ease,
+            border-width $animDur ease;
+        &::after{
+            color: $blue;
+            transform:translate(-50%,-50%) scale(1.2);
+            transition: 
+                transform $animDur ease,
+                color $animDur ease;
+        }
+    }
+}

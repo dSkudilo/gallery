@@ -5,9 +5,11 @@
 
 //gallery
 @import './gallery/gallery.scss';
+@import './gallery//gallaryBox.scss';
 
 //ui
 @import './ui/liteBox.scss';
+@import './ui/like.scss';
 
 
 body{

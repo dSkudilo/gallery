@@ -1,7 +1,7 @@
 <template>
     <div class="backdrop" @click="close"></div>
     <div class="lite-box">
-        asdasd
+        <slot></slot>
     </div>
 </template>
 <script>
@@ -10,7 +10,6 @@ export default {
     emits:['close'],
     setup(_,{ emit }) {
         const close = () => emit('close')
-        
         return{
             close
         }

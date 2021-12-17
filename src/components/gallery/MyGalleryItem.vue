@@ -3,14 +3,15 @@
         class="gallery__item" 
         @click="open"
     >
-        <img src="https://www.fillmurray.com/640/360" alt="alt" class="gallery__img">
+        <img :src="data.img" :alt="data.id" class="gallery__img">
     </div>
 </template>
 <script>
 export default {
     emits:['open'],
-    setup(_,{ emit }) {
-        const open = () => emit('open')
+    props:['data'],
+    setup({ data },{ emit }) {
+        const open = () => emit('open',data)
         return {
             open
         }
