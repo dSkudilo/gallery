@@ -16,6 +16,8 @@
     outline: none;
     background: $white;
     transition: all 0.22s;
+    user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     &:hover {
         cursor: pointer;
         opacity: 0.8;
@@ -30,6 +32,10 @@
         border-color: #ddd!important;
         color: #999!important;
     }
+    &:focus{
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+
 }
 .btn.primary {
     background: $green;

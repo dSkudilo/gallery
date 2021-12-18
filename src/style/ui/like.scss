@@ -3,6 +3,7 @@ $animDur:.1s;
     position: relative;
     width: 50px;
     height: 30px;
+    user-select: none;
 }
 .like__input{
     width: 0;
@@ -15,7 +16,7 @@ $animDur:.1s;
             border-color $animDur ease,
             background-color $animDur ease;
     }
-    &:checked + .like__fake::after{
+    &:checked + .like__fake svg{
         color: #ffffff !important;
         transition: color $animDur ease;
     }
@@ -29,8 +30,8 @@ $animDur:.1s;
     border:1px solid $body;
     border-radius: $radius;
     cursor: pointer;
-    &::after{
-        content: '❤';
+    & svg{
+
         position: absolute;
         top: 50%;
         left: 50%;
@@ -43,7 +44,7 @@ $animDur:.1s;
         transition: 
             border-color $animDur ease,
             border-width $animDur ease;
-        &::after{
+        & svg{
             color: $blue;
             transform:translate(-50%,-50%) scale(1.2);
             transition: 
